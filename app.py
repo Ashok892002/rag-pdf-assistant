@@ -7,7 +7,9 @@ from langchain_groq import ChatGroq
 import os
 
 # API Key
-os.environ["GROQ_API_KEY"] = "paste_your_groq_key_here"
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 def extract_text_from_pdf(pdf_file):
     reader = PdfReader(pdf_file)
